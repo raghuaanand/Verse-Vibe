@@ -1,6 +1,6 @@
-# Scribbler Frontend
+# Verse Viber
 
-Scribbler is a frontend application for a blogging website, built using React, Tailwind CSS, TypeScript, and Zod for validation.
+Verse Viber is a frontend application for a blogging website, built using React, Tailwind CSS, TypeScript, and Zod for validation.
 
 ## Tech Stack
 

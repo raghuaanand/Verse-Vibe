@@ -1,10 +1,10 @@
 name = "backend"
 compatibility_date = "2023-12-01"
 
-[vars]
-DATABASE_URL=""
-JWT_SECRET=""
-# MY_VARIABLE = "production_value"
+# [vars]
+# DATABASE_URL="prisma://accelerate.prisma-data.net/?api_key=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhcGlfa2V5IjoiM2Q3YTVkNGQtYWY0YS00NGM2LThkMmMtNWZkZjZjOGY2MTMxIiwidGVuYW50X2lkIjoiYzlhYWE0MjYzOWY3MGU3ZTBjOGZkOWI2YmQwN2UyNjlkNjgwYzMxMjZmZjk3ZDYxMWZjMWUyZGEzZjk3ZjNhZCIsImludGVybmFsX3NlY3JldCI6ImNkYzhkNDE0LTU3OTMtNGU3YS1hN2YzLTNmMTJiNjI0NjNkYSJ9.GJQE2xBAJ0Jpvg4zwCspcFEVi9x-pLNsGTLyitQHCM4"
+
+# MY_VAR = "my-variable"
 
 # [[kv_namespaces]]
 # binding = "MY_KV_NAMESPACE"
@@ -18,3 +18,6 @@ JWT_SECRET=""
 # binding = "DB"
 # database_name = "my-database"
 # database_id = ""
+
+# [ai]
+# binding = "AI"

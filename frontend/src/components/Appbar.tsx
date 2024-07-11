@@ -3,7 +3,7 @@ import { Dropdown } from "./Dropdown";
 
 export const Appbar = () => {
   return (
-    <div className="text-2xl border-b flex justify-between px-10 py-4 mb-2">
+    <div className="text-2xl border-b flex justify-between px-10 py-4 mb-2 fixed w-screen bg-white z-10 shadow-md">
       <Link to={"/blogs"} className="hover:text-zinc-700 cursor-pointer">
         <Logo />
       </Link>
@@ -27,7 +27,7 @@ export const Logo = () => {
   return (
     <div className=" font-mono flex justify-center font-extrabold ">
       <div className="cursor-pointer flex flex-col justify-center p-2 hover:text-zinc-700">
-        Scribbler
+        Verse Viber
       </div>
     </div>
   );

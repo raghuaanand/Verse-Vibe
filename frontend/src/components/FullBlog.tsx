@@ -36,7 +36,7 @@ function AuthorDetails({ blog }: { blog: Blog }) {
           </div>
           <div className="pt-2 text-md text-slate-400 font-semibold">
             This blog was curated by {blog.author.name || "Anonymous"} and
-            posted to Scribbler
+            posted to Verse Viber
           </div>
         </div>
       </div>

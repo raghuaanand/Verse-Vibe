@@ -1,6 +1,6 @@
-# Scribbler
+# Verse Viber
 
-Scribbler is a modern web application for writing and publishing blogs, built with React, TypeScript, and Cloudflare Workers. It offers a seamless writing experience with rich text editing capabilities and robust backend infrastructure for data management and authentication.
+Verse Viber is a modern web application for writing and publishing blogs, built with React, TypeScript, and Cloudflare Workers. It offers a seamless writing experience with rich text editing capabilities and robust backend infrastructure for data management and authentication.
 
 ## Features
 
