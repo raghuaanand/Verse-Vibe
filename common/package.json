@@ -1,15 +1,24 @@
 {
-  "name": "@raghuaanand/blog-common",
+  "name": "@raghuanand/verse-viber-zod",
   "version": "1.0.0",
-  "description": "",
-  "main": "dist/index.js",
+  "main": "dist/schemas.js",
+  "types": "dist/schemas.d.ts",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "tsc",
+    "prepublishOnly": "npm run build"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "devDependencies": {
+    "typescript": "5.5.3"
   },
   "keywords": [],
-  "author": "",
+  "author": "raghu anand",
   "license": "ISC",
+  "description": "",
   "dependencies": {
-    "zod": "^3.22.4"
+    "zod": "^3.23.8"
   }
 }
