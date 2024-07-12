@@ -1,4 +1,4 @@
-import { SignupType } from "@raghuaanand/blog-common";
+import { SignupType } from "@raghuanand/verse-viber-zod";
 import { ChangeEvent, useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import axios from "axios";
