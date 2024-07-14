@@ -13,27 +13,22 @@ export const blogRouter = new Hono<{
     }
 }>();
 
-blogRouter.use('/*', async (c, next) => {
-
+blogRouter.use(async (c, next) => {
     const jwt = c.req.header('Authorization');
-    if (!jwt) {
-        c.status(401);
-        return c.json({
-            error: "unauthorized",
-        })
-    }
-    const token = jwt.split(' ')[1];
-    const payload = await verify(token, c.env.JWT_SECRET);
-    if (!payload) {
-        c.status(401);
-        return c.json({
-            error: "unauthorized"
-        })
-    }
-    // setting the userId in locals
-    c.set('userId', payload.id as string);
-    await next();
-})
+	if (!jwt) {
+		c.status(401);
+		return c.json({ error: "unauthorized" });
+	}
+	const token = jwt.split(' ')[1];
+	const payload = await verify(token, c.env.JWT_SECRET);
+	if (!payload) {
+		c.status(401);
+		return c.json({ error: "unauthorized" });
+	}
+	c.set('userId', payload.id as string);
+	await next()
+});
+
 
 blogRouter.post('/', async (c) => {
 
