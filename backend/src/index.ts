@@ -13,14 +13,14 @@ export const app = new Hono<{
   };
 }>();
 
-app.use('/api/*', cors({
+app.use('/*', cors({
   origin: 'http://localhost:5173', // Specify the allowed origin
   allowMethods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
   allowHeaders: ['Content-Type', 'Authorization'],
   credentials: true,
 }));
 app.route('/api/v1/user', userRouter)
-app.route("api/v1/blog", blogRouter)
+app.route("/api/v1/blog", blogRouter)
 
 
 export default app
