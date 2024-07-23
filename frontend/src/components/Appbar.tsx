@@ -3,7 +3,7 @@ import { Dropdown } from "./Dropdown";
 
 export const Appbar = () => {
   return (
-    <div className="text-2xl border-b flex justify-between px-10 py-4 mb-2 fixed w-screen bg-white z-10 shadow-md">
+    <div className="text-2xl border-b flex justify-between px-10 py-4 mb-2">
       <Link to={"/blogs"} className="hover:text-zinc-700 cursor-pointer">
         <Logo />
       </Link>

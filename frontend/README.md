@@ -1,4 +1,4 @@
-# Verse Viber
+# Verse Viber Frontend
 
 Verse Viber is a frontend application for a blogging website, built using React, Tailwind CSS, TypeScript, and Zod for validation.
 

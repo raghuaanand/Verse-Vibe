@@ -12,7 +12,7 @@ export const Quote = () => {
             Unleash Your Creativity!
             <br /> Write, Publish, and Connect with Readers Worldwide!
           </div>
-          <div className=" my-2 text-xl font-light">Raghu Anand </div>
+          <div className=" my-2 text-xl font-light">Raghu Anand</div>
           <div className=" invert-100">
             <Socials size={30} />
           </div>
@@ -43,7 +43,7 @@ export const Socials = ({ size }: { size: number }) => {
       <div className="ml-3 hover:invert-[0.25]">
         <a
           target="_blank"
-          href="https://www.linkedin.com/in/raghuaanand/">
+          href="https://www.linkedin.com/in/raghuaanand">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             width={size}
