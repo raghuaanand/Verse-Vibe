@@ -18,7 +18,7 @@ export const Auth = ({ type }: { type: "signup" | "signin" }) => {
     try {
       setWaiting(true);
       const response = await axios.post(
-        `${BACKEND_URL}/api/v1/user/${type === "signup" ? "signup" : "signin"}`,
+        `https://backend.raghuaanand.workers.dev/api/v1/user/${type === "signup" ? "signup" : "signin"}`,
         postInput
       );
       const jwt = response.data.token;
