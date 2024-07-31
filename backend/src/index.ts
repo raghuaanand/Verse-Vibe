@@ -21,8 +21,8 @@ const corsOptions = {
   optionsSuccessStatus: 204,
 };
 
-app.use("/api/*", cors(corsOptions));
-app.route("/api/v1/user", userRouter);
-app.route("/api/v1/blog", blogRouter);
+app.use("api/*", cors(corsOptions));
+app.route("api/v1/user", userRouter);
+app.route("api/v1/blog", blogRouter);
 
 export default app;
