@@ -61,7 +61,7 @@ export const Publish = () => {
                   setInvalidInput("The Title / Content is  too short");
                 } else {
                   const response = await axios.post(
-                    `${BACKEND_URL}/api/v1/blog`,
+                    `https://backend.raghuaanand.workers.dev/api/v1/blog`,
                     {
                       title,
                       content,
