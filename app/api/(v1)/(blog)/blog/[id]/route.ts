@@ -63,8 +63,6 @@ export async function PUT(req: NextRequest, { params }: { params: { id: string }
   }
 }
 
-
-
 export async function GET(req: NextRequest, { params }: { params: { id: string } }) {
   try {
     const { id } = params;
@@ -108,4 +106,3 @@ export async function GET(req: NextRequest, { params }: { params: { id: string }
     );
   }
 }
-
