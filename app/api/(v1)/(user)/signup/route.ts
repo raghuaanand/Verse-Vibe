@@ -26,7 +26,11 @@ export async function POST(req: NextRequest) {
 
     return NextResponse.json({ token: jwtToken }, { status: 201 });
   } catch (error) {
-    console.error(error);
+    if (error instanceof Error) {
+      console.error(error.message);
+    } else {
+      console.error("Unknown error", error);
+    }
     return NextResponse.json({ message: "Internal Server Error" }, { status: 500 });
   }
 }
