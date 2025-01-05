@@ -1,19 +1,19 @@
 'use client'
 import { ChangeEvent, useState } from "react";
 import axios from "axios";
-import { redirect } from "next/navigation";
+import { useRouter } from "next/navigation"; // Changed from redirect to useRouter
 import { SignupType } from "@/utils/schemas/auth";
 import Link from "next/link";
 
 export const Auth = ({ type }: { type: "signup" | "signin" }) => {
-  const navigate = redirect;
+  const router = useRouter(); // Use router instead of redirect
   const [postInput, setPostInput] = useState<SignupType>({
     email: "",
     password: "",
     name: "",
   });
 
-  const [error, setError] = useState<string | null>(""); // New state for error
+  const [error, setError] = useState<string | null>(""); 
   const [waiting, setWaiting] = useState<boolean>(false);
 
   function validateInput() {
@@ -34,18 +34,25 @@ export const Auth = ({ type }: { type: "signup" | "signin" }) => {
       );
       const jwt = response.data.token;
       if (!jwt) {
-        throw new Error("Token not received"); // Ensure a valid token is returned
+        throw new Error("Token not received");
       }
       localStorage.setItem("token", jwt);
-      navigate("/blogs");
+      router.push("/blogs"); // Use router.push instead of navigate
     } catch (err: unknown) {
-      console.error("Error in request:", err);
-      if (axios.isAxiosError(err) && err.response && err.response.data && err.response.data.message) {
-        // Display backend error message if available
-        setError(err.response.data.message);
+      if (axios.isAxiosError(err)) {
+        // Handle Axios errors properly
+        if (err.response) {
+          // Server responded with error
+          setError(err.response.data.message || "Invalid email or password");
+        } else if (err.request) {
+          // Request made but no response
+          setError("No response from server. Please try again.");
+        } else {
+          // Error in request setup
+          setError("Something went wrong. Please try again.");
+        }
       } else {
-        // Fallback generic message
-        setError("Invalid Email or Password");
+        setError("An unexpected error occurred");
       }
     } finally {
       setWaiting(false);
